@@ -225,7 +225,35 @@ RC BTreeIndex::insert(int key, const RecordId& rid)
  */
 RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 {
-    return 0;
+    if(treeHeight == 0)
+    	return RC_END_OF_TREE;
+    PageId cursor_pid;
+    int leaf_eid;
+    BTNonLeafNode midNode;
+    BTLeafNode leafNode;
+    
+    PageId curr_pid = rootPid;
+	int curr_height = 1;
+	while(curr_height < treeHeight)
+	{
+		// read (key,rid) at curr_pid
+		if(midNode.read(curr_pid,pf) != 0)
+			return -1;
+		// readEntry
+		if(midNode.locateChildPtr(searchKey,curr_pid) != 0)
+			return -1;
+		curr_height++;
+	}
+	// reached leaf
+	if(leafNode.read(curr_pid,pf) != 0)
+		return -1;
+	// find eid corresponding to searchKey in curr_pid
+	if(leafNode.locate(searchKey,leaf_eid) != 0)
+		return RC_NO_SUCH_RECORD;
+	// set up indexCursor
+	cursor.eid = leaf_eid;
+	cursor_pid = curr_pid;
+	return 0;
 }
 
 /*
@@ -238,5 +266,33 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
  */
 RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 {
+    PageId cursor_pid;
+    int cursor_eid;
+    BTLeafNode leafNode;
+
+    cursor_pid = cursor.pid;
+    cursor_eid = cursor.eid;
+    // read IndexCursor
+    if(leafNode.read(cursor_pid,pf) != 0)
+    	return -1;
+    // read (key,rid) at cursor location
+    if(leafNode.readEntry(cursor_eid,key,rid) != 0)
+    	return -1;
+    if(cursor_pid <= 0)
+    	return RC_INVALID_PID;
+    // readForward by incrementing cursorEid
+    if(cursor_eid+1 >= leafNode.getKeyCount())
+    {
+    	// move to next leafNode
+    	cursor_eid = 0;
+    	cursor_pid = leafNode.getNextNodePtr();
+    }
+    else
+    {
+    	cursor_eid++;
+    }
+    // write back new cursor_eid
+    cursor.eid = cursor_eid;
+    cursor.pid = cursor_pid;
     return 0;
 }
