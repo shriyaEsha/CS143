@@ -1,4 +1,5 @@
 /*
+from 2.. now in BB
  * Copyright (C) 2008 by The Regents of the University of California
  * Redistribution of this file is permitted under the terms of the GNU
  * Public License (GPL).
@@ -152,8 +153,6 @@ class BTNonLeafNode {
     * @param pid[OUT] the pointer to the child node to follow.
     * @return 0 if successful. Return an error code if there is an error.
     */
-    RC locate(int searchKey, int& eid);
-    
     RC locateChildPtr(int searchKey, PageId& pid);
 
    /**
@@ -170,7 +169,6 @@ class BTNonLeafNode {
     * @return the number of keys in the node
     */
     int getKeyCount();
-
     int maxKeyCount();
    /**
     * Read the content of the node from the page pid in the PageFile pf.
@@ -187,6 +185,9 @@ class BTNonLeafNode {
     * @return 0 if successful. Return an error code if there is an error.
     */
     RC write(PageId pid, PageFile& pf);
+   // RC locate(int searchKey, int& eid);
+    
+    
     
   private:
    /**
