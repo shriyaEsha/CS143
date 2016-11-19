@@ -10,9 +10,18 @@
 #include "Bruinbase.h"
 #include "SqlEngine.h"
 #include <cstdio>
+<<<<<<< HEAD
 
 int main()
 {
+=======
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  //std::cout<<"In main";
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
   // run the SQL engine taking user commands from standard input (console).
   SqlEngine::run(stdin);
 

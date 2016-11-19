@@ -18,9 +18,12 @@ using namespace std;
 BTreeIndex::BTreeIndex()
 {
     rootPid = -1;
+<<<<<<< HEAD
     treeHeight = 0;
     // clear buffer
     fill(buffer,buffer+PageFile::PAGE_SIZE,'\0');
+=======
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 /*
@@ -32,6 +35,7 @@ BTreeIndex::BTreeIndex()
  */
 RC BTreeIndex::open(const string& indexname, char mode)
 {
+<<<<<<< HEAD
    	if(pf.open(indexname,mode)!=0)
    		return -1;
    	// init variables if opening for first time
@@ -57,6 +61,9 @@ RC BTreeIndex::open(const string& indexname, char mode)
    		treeHeight = ht;
    	}
    	return 0;
+=======
+    return 0;
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 /*
@@ -65,12 +72,16 @@ RC BTreeIndex::open(const string& indexname, char mode)
  */
 RC BTreeIndex::close()
 {
+<<<<<<< HEAD
     // save variable to index file before closing
     memcpy(buffer,&rootPid,sizeof(int));
     memcpy(buffer+sizeof(int),&treeHeight,sizeof(int));
     if(pf.write(0,buffer) != 0)
     	return -1;
     return pf.close();
+=======
+    return 0;
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 /*
@@ -79,6 +90,7 @@ RC BTreeIndex::close()
  * @param rid[IN] the RecordId for the record being inserted into the index
  * @return error code. 0 if no error
  */
+<<<<<<< HEAD
 RC BTreeIndex::insert_recursive(int key, const RecordId& rid, PageId curPid, PageId &sibling_pid, int &sibling_key, int level)
 {
 	RC error;
@@ -203,6 +215,11 @@ RC BTreeIndex::insert(int key, const RecordId& rid)
     	return root.write(rootPid,pf);
     }
     return insert_recursive(key,rid,rootPid,sibling_pid,sibling_key,level);
+=======
+RC BTreeIndex::insert(int key, const RecordId& rid)
+{
+    return 0;
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 /**
@@ -225,6 +242,7 @@ RC BTreeIndex::insert(int key, const RecordId& rid)
  */
 RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 {
+<<<<<<< HEAD
     if(treeHeight == 0)
     	return RC_END_OF_TREE;
     PageId cursor_pid;
@@ -254,6 +272,9 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
 	cursor.eid = leaf_eid;
 	cursor_pid = curr_pid;
 	return 0;
+=======
+    return 0;
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 /*
@@ -266,6 +287,7 @@ RC BTreeIndex::locate(int searchKey, IndexCursor& cursor)
  */
 RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
 {
+<<<<<<< HEAD
     PageId cursor_pid;
     int cursor_eid;
     BTLeafNode leafNode;
@@ -294,5 +316,7 @@ RC BTreeIndex::readForward(IndexCursor& cursor, int& key, RecordId& rid)
     // write back new cursor_eid
     cursor.eid = cursor_eid;
     cursor.pid = cursor_pid;
+=======
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     return 0;
 }

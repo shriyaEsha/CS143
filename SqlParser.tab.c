@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 /* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
    Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
+=======
+/* A Bison parser, made by GNU Bison 3.0.2.  */
+
+/* Bison implementation for Yacc-like parsers in C
+
+   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -44,7 +52,11 @@
 #define YYBISON 1
 
 /* Bison version.  */
+<<<<<<< HEAD
 #define YYBISON_VERSION "3.0.4"
+=======
+#define YYBISON_VERSION "3.0.2"
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -164,7 +176,11 @@ extern int sqldebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+<<<<<<< HEAD
 
+=======
+typedef union YYSTYPE YYSTYPE;
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 union YYSTYPE
 {
 #line 33 "SqlParser.y" /* yacc.c:355  */
@@ -176,8 +192,11 @@ union YYSTYPE
 
 #line 178 "SqlParser.tab.c" /* yacc.c:355  */
 };
+<<<<<<< HEAD
 
 typedef union YYSTYPE YYSTYPE;
+=======
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -191,7 +210,11 @@ int sqlparse (void);
 
 /* Copy the second part of user declarations.  */
 
+<<<<<<< HEAD
 #line 195 "SqlParser.tab.c" /* yacc.c:358  */
+=======
+#line 193 "SqlParser.tab.c" /* yacc.c:358  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 #ifdef short
 # undef short
@@ -1290,31 +1313,51 @@ yyreduce:
         case 4:
 #line 57 "SqlParser.y" /* yacc.c:1646  */
     { fprintf(stdout, "Bruinbase> "); }
+<<<<<<< HEAD
 #line 1294 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1292 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 5:
 #line 58 "SqlParser.y" /* yacc.c:1646  */
     { fprintf(stdout, "Bruinbase> "); }
+<<<<<<< HEAD
 #line 1300 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1298 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 7:
 #line 60 "SqlParser.y" /* yacc.c:1646  */
     { fprintf(stdout, "Bruinbase> "); }
+<<<<<<< HEAD
 #line 1306 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1304 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 8:
 #line 61 "SqlParser.y" /* yacc.c:1646  */
     { fprintf(stdout, "Bruinbase> "); }
+<<<<<<< HEAD
 #line 1312 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1310 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 9:
 #line 65 "SqlParser.y" /* yacc.c:1646  */
     { return 0; }
+<<<<<<< HEAD
 #line 1318 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1316 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 10:
@@ -1324,7 +1367,11 @@ yyreduce:
 	  free((yyvsp[-3].string));
 	  free((yyvsp[-1].string));
 	}
+<<<<<<< HEAD
 #line 1328 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1326 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 11:
@@ -1334,7 +1381,11 @@ yyreduce:
 	  free((yyvsp[-5].string));
 	  free((yyvsp[-3].string));
 	}
+<<<<<<< HEAD
 #line 1338 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1336 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 12:
@@ -1344,7 +1395,11 @@ yyreduce:
 		runSelect((yyvsp[-3].integer), (yyvsp[-1].string), conds);
 		free((yyvsp[-1].string));
 	}
+<<<<<<< HEAD
 #line 1348 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1346 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 13:
@@ -1357,7 +1412,11 @@ yyreduce:
 		}
 	  	delete (yyvsp[-1].conds);
 	}
+<<<<<<< HEAD
 #line 1361 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1359 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 14:
@@ -1368,7 +1427,11 @@ yyreduce:
 	  (yyval.conds) = v;
           delete (yyvsp[0].cond);
 	}
+<<<<<<< HEAD
 #line 1372 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1370 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 15:
@@ -1378,7 +1441,11 @@ yyreduce:
 	  (yyval.conds) = (yyvsp[-2].conds);
           delete (yyvsp[0].cond);
 	}
+<<<<<<< HEAD
 #line 1382 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1380 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 16:
@@ -1390,25 +1457,41 @@ yyreduce:
 	  c->value = (yyvsp[0].string);
 	  (yyval.cond) = c;
         }
+<<<<<<< HEAD
 #line 1394 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1392 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 17:
 #line 122 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = (yyvsp[0].integer); }
+<<<<<<< HEAD
 #line 1400 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1398 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 18:
 #line 123 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = 3; }
+<<<<<<< HEAD
 #line 1406 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1404 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 19:
 #line 124 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = 4; }
+<<<<<<< HEAD
 #line 1412 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1410 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 20:
@@ -1419,65 +1502,109 @@ yyreduce:
 		else sqlerror("wrong attribute name. neither key or value");
 		free((yyvsp[0].string));
 	}
+<<<<<<< HEAD
 #line 1423 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1421 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 21:
 #line 136 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.string) = (yyvsp[0].string); }
+<<<<<<< HEAD
 #line 1429 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1427 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 22:
 #line 137 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.string) = (yyvsp[0].string); }
+<<<<<<< HEAD
 #line 1435 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1433 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 23:
 #line 141 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.string) = (yyvsp[0].string); }
+<<<<<<< HEAD
 #line 1441 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1439 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 24:
 #line 145 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = SelCond::EQ; }
+<<<<<<< HEAD
 #line 1447 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1445 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 25:
 #line 146 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = SelCond::NE; }
+<<<<<<< HEAD
 #line 1453 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1451 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 26:
 #line 147 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = SelCond::LT; }
+<<<<<<< HEAD
 #line 1459 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1457 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 27:
 #line 148 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = SelCond::GT; }
+<<<<<<< HEAD
 #line 1465 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1463 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 28:
 #line 149 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = SelCond::LE; }
+<<<<<<< HEAD
 #line 1471 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1469 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
     break;
 
   case 29:
 #line 150 "SqlParser.y" /* yacc.c:1646  */
     { (yyval.integer) = SelCond::GE; }
+<<<<<<< HEAD
 #line 1477 "SqlParser.tab.c" /* yacc.c:1646  */
     break;
 
 
 #line 1481 "SqlParser.tab.c" /* yacc.c:1646  */
+=======
+#line 1475 "SqlParser.tab.c" /* yacc.c:1646  */
+    break;
+
+
+#line 1479 "SqlParser.tab.c" /* yacc.c:1646  */
+>>>>>>> ececbdc2f4c387732b404700a2863874af308041
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

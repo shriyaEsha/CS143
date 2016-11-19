@@ -127,6 +127,7 @@ class BTNonLeafNode {
     * @param pid[IN] the PageId to insert
     * @return 0 if successful. Return an error code if the node is full.
     */
+    BTNonLeafNode();
     RC insert(int key, PageId pid);
 
    /**
@@ -171,8 +172,6 @@ class BTNonLeafNode {
     int getKeyCount();
 
     int maxKeyCount();
-    
-
    /**
     * Read the content of the node from the page pid in the PageFile pf.
     * @param pid[IN] the PageId to read
@@ -188,7 +187,6 @@ class BTNonLeafNode {
     * @return 0 if successful. Return an error code if there is an error.
     */
     RC write(PageId pid, PageFile& pf);
-
     
   private:
    /**
@@ -196,6 +194,10 @@ class BTNonLeafNode {
     * that contains the node.
     */
     int number_keys;
+    int sizeCount;
+    int sizeRec;
+    int sizeMax;
+    int sizeTot;
     char buffer[PageFile::PAGE_SIZE];
 }; 
 
