@@ -26,13 +26,8 @@
 
 #define FLEX_SCANNER
 #define YY_FLEX_MAJOR_VERSION 2
-<<<<<<< HEAD
 #define YY_FLEX_MINOR_VERSION 6
 #define YY_FLEX_SUBMINOR_VERSION 0
-=======
-#define YY_FLEX_MINOR_VERSION 5
-#define YY_FLEX_SUBMINOR_VERSION 35
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 #if YY_FLEX_SUBMINOR_VERSION > 0
 #define FLEX_BETA
 #endif
@@ -185,16 +180,12 @@ typedef unsigned int flex_uint32_t;
 typedef struct yy_buffer_state *YY_BUFFER_STATE;
 #endif
 
-<<<<<<< HEAD
 #ifndef YY_TYPEDEF_YY_SIZE_T
 #define YY_TYPEDEF_YY_SIZE_T
 typedef size_t yy_size_t;
 #endif
 
 extern yy_size_t sqlleng;
-=======
-extern int sqlleng;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 extern FILE *sqlin, *sqlout;
 
@@ -203,10 +194,7 @@ extern FILE *sqlin, *sqlout;
 #define EOB_ACT_LAST_MATCH 2
 
     #define YY_LESS_LINENO(n)
-<<<<<<< HEAD
     #define YY_LINENO_REWIND_TO(ptr)
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     
 /* Return all but the first "n" matched characters back to the input stream. */
 #define yyless(n) \
@@ -224,14 +212,6 @@ extern FILE *sqlin, *sqlout;
 
 #define unput(c) yyunput( c, (yytext_ptr)  )
 
-<<<<<<< HEAD
-=======
-#ifndef YY_TYPEDEF_YY_SIZE_T
-#define YY_TYPEDEF_YY_SIZE_T
-typedef size_t yy_size_t;
-#endif
-
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 #ifndef YY_STRUCT_YY_BUFFER_STATE
 #define YY_STRUCT_YY_BUFFER_STATE
 struct yy_buffer_state
@@ -320,11 +300,7 @@ static YY_BUFFER_STATE * yy_buffer_stack = 0; /**< Stack as an array. */
 /* yy_hold_char holds the character lost when sqltext is formed. */
 static char yy_hold_char;
 static int yy_n_chars;		/* number of characters read into yy_ch_buf */
-<<<<<<< HEAD
 yy_size_t sqlleng;
-=======
-int sqlleng;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 /* Points to current character in buffer. */
 static char *yy_c_buf_p = (char *) 0;
@@ -352,11 +328,7 @@ static void sql_init_buffer (YY_BUFFER_STATE b,FILE *file  );
 
 YY_BUFFER_STATE sql_scan_buffer (char *base,yy_size_t size  );
 YY_BUFFER_STATE sql_scan_string (yyconst char *yy_str  );
-<<<<<<< HEAD
 YY_BUFFER_STATE sql_scan_bytes (yyconst char *bytes,yy_size_t len  );
-=======
-YY_BUFFER_STATE sql_scan_bytes (yyconst char *bytes,int len  );
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 void *sqlalloc (yy_size_t  );
 void *sqlrealloc (void *,yy_size_t  );
@@ -399,23 +371,17 @@ extern int sqllineno;
 int sqllineno = 1;
 
 extern char *sqltext;
-<<<<<<< HEAD
 #ifdef yytext_ptr
 #undef yytext_ptr
 #endif
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 #define yytext_ptr sqltext
 
 static yy_state_type yy_get_previous_state (void );
 static yy_state_type yy_try_NUL_trans (yy_state_type current_state  );
 static int yy_get_next_buffer (void );
-<<<<<<< HEAD
 #if defined(__GNUC__) && __GNUC__ >= 3
 __attribute__((__noreturn__))
 #endif
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 static void yy_fatal_error (yyconst char msg[]  );
 
 /* Done after the current pattern has been matched and before the
@@ -454,11 +420,7 @@ static yyconst flex_int16_t yy_accept[113] =
         9,    0
     } ;
 
-<<<<<<< HEAD
 static yyconst YY_CHAR yy_ec[256] =
-=======
-static yyconst flex_int32_t yy_ec[256] =
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    4,    1,    1,    1,    1,    1,    1,    1,
@@ -490,11 +452,7 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-<<<<<<< HEAD
 static yyconst YY_CHAR yy_meta[54] =
-=======
-static yyconst flex_int32_t yy_meta[54] =
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         2,    1,    1,    1,    1,    2,    2,    2,    2,    2,
@@ -504,11 +462,7 @@ static yyconst flex_int32_t yy_meta[54] =
         2,    2,    2
     } ;
 
-<<<<<<< HEAD
 static yyconst flex_uint16_t yy_base[115] =
-=======
-static yyconst flex_int16_t yy_base[115] =
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     {   0,
         0,    0,  144,  145,  141,  145,  139,  136,  145,  145,
       129,  128,  145,   40,  145,  124,  111,    0,  109,  101,
@@ -542,11 +496,7 @@ static yyconst flex_int16_t yy_def[115] =
       112,    0,  112,  112
     } ;
 
-<<<<<<< HEAD
 static yyconst flex_uint16_t yy_nxt[199] =
-=======
-static yyconst flex_int16_t yy_nxt[199] =
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     {   0,
         4,    5,    6,    7,    8,    4,    4,    9,   10,   11,
        12,   13,   14,   15,   16,   17,   18,   19,   18,   20,
@@ -627,11 +577,7 @@ char* strlower(char* s)
         }
 	return s;
 }
-<<<<<<< HEAD
 #line 581 "lex.sql.c"
-=======
-#line 574 "lex.sql.c"
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 #define INITIAL 0
 
@@ -664,7 +610,6 @@ void sqlset_extra (YY_EXTRA_TYPE user_defined  );
 
 FILE *sqlget_in (void );
 
-<<<<<<< HEAD
 void sqlset_in  (FILE * _in_str  );
 
 FILE *sqlget_out (void );
@@ -672,25 +617,12 @@ FILE *sqlget_out (void );
 void sqlset_out  (FILE * _out_str  );
 
 yy_size_t sqlget_leng (void );
-=======
-void sqlset_in  (FILE * in_str  );
-
-FILE *sqlget_out (void );
-
-void sqlset_out  (FILE * out_str  );
-
-int sqlget_leng (void );
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 char *sqlget_text (void );
 
 int sqlget_lineno (void );
 
-<<<<<<< HEAD
 void sqlset_lineno (int _line_number  );
-=======
-void sqlset_lineno (int line_number  );
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -704,17 +636,12 @@ extern int sqlwrap (void );
 #endif
 #endif
 
-<<<<<<< HEAD
 #ifndef YY_NO_UNPUT
     
     static void yyunput (int c,char *buf_ptr  );
     
 #endif
 
-=======
-    static void yyunput (int c,char *buf_ptr  );
-    
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 #ifndef yytext_ptr
 static void yy_flex_strncpy (char *,yyconst char *,int );
 #endif
@@ -827,11 +754,7 @@ extern int sqllex (void);
 
 /* Code executed at the end of each rule. */
 #ifndef YY_BREAK
-<<<<<<< HEAD
 #define YY_BREAK /*LINTED*/break;
-=======
-#define YY_BREAK break;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 #endif
 
 #define YY_RULE_SETUP \
@@ -841,22 +764,10 @@ extern int sqllex (void);
  */
 YY_DECL
 {
-<<<<<<< HEAD
 	yy_state_type yy_current_state;
 	char *yy_cp, *yy_bp;
 	int yy_act;
     
-=======
-	register yy_state_type yy_current_state;
-	register char *yy_cp, *yy_bp;
-	register int yy_act;
-    
-#line 17 "SqlParser.l"
-
-
-#line 764 "lex.sql.c"
-
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	if ( !(yy_init) )
 		{
 		(yy_init) = 1;
@@ -883,7 +794,6 @@ YY_DECL
 		sql_load_buffer_state( );
 		}
 
-<<<<<<< HEAD
 	{
 #line 17 "SqlParser.l"
 
@@ -891,9 +801,6 @@ YY_DECL
 #line 802 "lex.sql.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
-=======
-	while ( 1 )		/* loops until end-of-file is reached */
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 		{
 		yy_cp = (yy_c_buf_p);
 
@@ -909,11 +816,7 @@ YY_DECL
 yy_match:
 		do
 			{
-<<<<<<< HEAD
 			YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)] ;
-=======
-			register YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 			if ( yy_accept[yy_current_state] )
 				{
 				(yy_last_accepting_state) = yy_current_state;
@@ -1084,11 +987,7 @@ YY_RULE_SETUP
 #line 47 "SqlParser.l"
 ECHO;
 	YY_BREAK
-<<<<<<< HEAD
 #line 991 "lex.sql.c"
-=======
-#line 979 "lex.sql.c"
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1219,10 +1118,7 @@ case YY_STATE_EOF(INITIAL):
 			"fatal flex scanner internal error--no action found" );
 	} /* end of action switch */
 		} /* end of scanning one token */
-<<<<<<< HEAD
 	} /* end of user's declarations */
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 } /* end of sqllex */
 
 /* yy_get_next_buffer - try to read in a new buffer
@@ -1234,15 +1130,9 @@ case YY_STATE_EOF(INITIAL):
  */
 static int yy_get_next_buffer (void)
 {
-<<<<<<< HEAD
     	char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
 	char *source = (yytext_ptr);
 	yy_size_t number_to_move, i;
-=======
-    	register char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
-	register char *source = (yytext_ptr);
-	register int number_to_move, i;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	int ret_val;
 
 	if ( (yy_c_buf_p) > &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[(yy_n_chars) + 1] )
@@ -1271,11 +1161,7 @@ static int yy_get_next_buffer (void)
 	/* Try to read more data. */
 
 	/* First move last chars to start of buffer. */
-<<<<<<< HEAD
 	number_to_move = (yy_size_t) ((yy_c_buf_p) - (yytext_ptr)) - 1;
-=======
-	number_to_move = (int) ((yy_c_buf_p) - (yytext_ptr)) - 1;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 	for ( i = 0; i < number_to_move; ++i )
 		*(dest++) = *(source++);
@@ -1288,33 +1174,21 @@ static int yy_get_next_buffer (void)
 
 	else
 		{
-<<<<<<< HEAD
 			yy_size_t num_to_read =
-=======
-			int num_to_read =
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 			YY_CURRENT_BUFFER_LVALUE->yy_buf_size - number_to_move - 1;
 
 		while ( num_to_read <= 0 )
 			{ /* Not enough room in the buffer - grow it. */
 
 			/* just a shorter name for the current buffer */
-<<<<<<< HEAD
 			YY_BUFFER_STATE b = YY_CURRENT_BUFFER_LVALUE;
-=======
-			YY_BUFFER_STATE b = YY_CURRENT_BUFFER;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 			int yy_c_buf_p_offset =
 				(int) ((yy_c_buf_p) - b->yy_ch_buf);
 
 			if ( b->yy_is_our_buffer )
 				{
-<<<<<<< HEAD
 				yy_size_t new_size = b->yy_buf_size * 2;
-=======
-				int new_size = b->yy_buf_size * 2;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 				if ( new_size <= 0 )
 					b->yy_buf_size += b->yy_buf_size / 8;
@@ -1345,11 +1219,7 @@ static int yy_get_next_buffer (void)
 
 		/* Read in more data. */
 		YY_INPUT( (&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[number_to_move]),
-<<<<<<< HEAD
 			(yy_n_chars), num_to_read );
-=======
-			(yy_n_chars), (size_t) num_to_read );
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 		YY_CURRENT_BUFFER_LVALUE->yy_n_chars = (yy_n_chars);
 		}
@@ -1373,15 +1243,9 @@ static int yy_get_next_buffer (void)
 	else
 		ret_val = EOB_ACT_CONTINUE_SCAN;
 
-<<<<<<< HEAD
 	if ((int) ((yy_n_chars) + number_to_move) > YY_CURRENT_BUFFER_LVALUE->yy_buf_size) {
 		/* Extend the array by 50%, plus the number we really need. */
 		int new_size = (yy_n_chars) + number_to_move + ((yy_n_chars) >> 1);
-=======
-	if ((yy_size_t) ((yy_n_chars) + number_to_move) > YY_CURRENT_BUFFER_LVALUE->yy_buf_size) {
-		/* Extend the array by 50%, plus the number we really need. */
-		yy_size_t new_size = (yy_n_chars) + number_to_move + ((yy_n_chars) >> 1);
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 		YY_CURRENT_BUFFER_LVALUE->yy_ch_buf = (char *) sqlrealloc((void *) YY_CURRENT_BUFFER_LVALUE->yy_ch_buf,new_size  );
 		if ( ! YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
 			YY_FATAL_ERROR( "out of dynamic memory in yy_get_next_buffer()" );
@@ -1400,23 +1264,14 @@ static int yy_get_next_buffer (void)
 
     static yy_state_type yy_get_previous_state (void)
 {
-<<<<<<< HEAD
 	yy_state_type yy_current_state;
 	char *yy_cp;
-=======
-	register yy_state_type yy_current_state;
-	register char *yy_cp;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     
 	yy_current_state = (yy_start);
 
 	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
 		{
-<<<<<<< HEAD
 		YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
-=======
-		register YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 		if ( yy_accept[yy_current_state] )
 			{
 			(yy_last_accepting_state) = yy_current_state;
@@ -1441,17 +1296,10 @@ static int yy_get_next_buffer (void)
  */
     static yy_state_type yy_try_NUL_trans  (yy_state_type yy_current_state )
 {
-<<<<<<< HEAD
 	int yy_is_jam;
     	char *yy_cp = (yy_c_buf_p);
 
 	YY_CHAR yy_c = 1;
-=======
-	register int yy_is_jam;
-    	register char *yy_cp = (yy_c_buf_p);
-
-	register YY_CHAR yy_c = 1;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	if ( yy_accept[yy_current_state] )
 		{
 		(yy_last_accepting_state) = yy_current_state;
@@ -1466,7 +1314,6 @@ static int yy_get_next_buffer (void)
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 	yy_is_jam = (yy_current_state == 112);
 
-<<<<<<< HEAD
 		return yy_is_jam ? 0 : yy_current_state;
 }
 
@@ -1475,14 +1322,6 @@ static int yy_get_next_buffer (void)
     static void yyunput (int c, char * yy_bp )
 {
 	char *yy_cp;
-=======
-	return yy_is_jam ? 0 : yy_current_state;
-}
-
-    static void yyunput (int c, register char * yy_bp )
-{
-	register char *yy_cp;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     
     yy_cp = (yy_c_buf_p);
 
@@ -1492,17 +1331,10 @@ static int yy_get_next_buffer (void)
 	if ( yy_cp < YY_CURRENT_BUFFER_LVALUE->yy_ch_buf + 2 )
 		{ /* need to shift things up to make room */
 		/* +2 for EOB chars. */
-<<<<<<< HEAD
 		yy_size_t number_to_move = (yy_n_chars) + 2;
 		char *dest = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[
 					YY_CURRENT_BUFFER_LVALUE->yy_buf_size + 2];
 		char *source =
-=======
-		register int number_to_move = (yy_n_chars) + 2;
-		register char *dest = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[
-					YY_CURRENT_BUFFER_LVALUE->yy_buf_size + 2];
-		register char *source =
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 				&YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[number_to_move];
 
 		while ( source > YY_CURRENT_BUFFER_LVALUE->yy_ch_buf )
@@ -1524,11 +1356,8 @@ static int yy_get_next_buffer (void)
 	(yy_c_buf_p) = yy_cp;
 }
 
-<<<<<<< HEAD
 #endif
 
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 #ifndef YY_NO_INPUT
 #ifdef __cplusplus
     static int yyinput (void)
@@ -1553,11 +1382,7 @@ static int yy_get_next_buffer (void)
 
 		else
 			{ /* need more input */
-<<<<<<< HEAD
 			yy_size_t offset = (yy_c_buf_p) - (yytext_ptr);
-=======
-			int offset = (yy_c_buf_p) - (yytext_ptr);
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 			++(yy_c_buf_p);
 
 			switch ( yy_get_next_buffer(  ) )
@@ -1682,11 +1507,7 @@ static void sql_load_buffer_state  (void)
 	if ( ! b )
 		YY_FATAL_ERROR( "out of dynamic memory in sql_create_buffer()" );
 
-<<<<<<< HEAD
 	b->yy_buf_size = (yy_size_t)size;
-=======
-	b->yy_buf_size = size;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 	/* yy_ch_buf has to be 2 characters longer than the size given because
 	 * we need to put in 2 end-of-buffer characters.
@@ -1721,13 +1542,6 @@ static void sql_load_buffer_state  (void)
 	sqlfree((void *) b  );
 }
 
-<<<<<<< HEAD
-=======
-#ifndef __cplusplus
-extern int isatty (int );
-#endif /* __cplusplus */
-    
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 /* Initializes or reinitializes a buffer.
  * This function is sometimes called more than once on the same buffer,
  * such as during a sqlrestart() or at EOF.
@@ -1840,11 +1654,7 @@ void sqlpop_buffer_state (void)
  */
 static void sqlensure_buffer_stack (void)
 {
-<<<<<<< HEAD
 	yy_size_t num_to_alloc;
-=======
-	int num_to_alloc;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     
 	if (!(yy_buffer_stack)) {
 
@@ -1852,11 +1662,7 @@ static void sqlensure_buffer_stack (void)
 		 * scanner will even need a stack. We use 2 instead of 1 to avoid an
 		 * immediate realloc on the next call.
          */
-<<<<<<< HEAD
 		num_to_alloc = 1; /* After all that talk, this was set to 1 anyways... */
-=======
-		num_to_alloc = 1;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 		(yy_buffer_stack) = (struct yy_buffer_state**)sqlalloc
 								(num_to_alloc * sizeof(struct yy_buffer_state*)
 								);
@@ -1873,11 +1679,7 @@ static void sqlensure_buffer_stack (void)
 	if ((yy_buffer_stack_top) >= ((yy_buffer_stack_max)) - 1){
 
 		/* Increase the buffer to prepare for a possible push. */
-<<<<<<< HEAD
 		yy_size_t grow_size = 8 /* arbitrary grow size */;
-=======
-		int grow_size = 8 /* arbitrary grow size */;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
 		num_to_alloc = (yy_buffer_stack_max) + grow_size;
 		(yy_buffer_stack) = (struct yy_buffer_state**)sqlrealloc
@@ -1949,20 +1751,12 @@ YY_BUFFER_STATE sql_scan_string (yyconst char * yystr )
  * 
  * @return the newly allocated buffer state object.
  */
-<<<<<<< HEAD
 YY_BUFFER_STATE sql_scan_bytes  (yyconst char * yybytes, yy_size_t  _yybytes_len )
-=======
-YY_BUFFER_STATE sql_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 {
 	YY_BUFFER_STATE b;
 	char *buf;
 	yy_size_t n;
-<<<<<<< HEAD
 	yy_size_t i;
-=======
-	int i;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
     
 	/* Get memory for full buffer, including space for trailing EOB's. */
 	n = _yybytes_len + 2;
@@ -1993,11 +1787,7 @@ YY_BUFFER_STATE sql_scan_bytes  (yyconst char * yybytes, int  _yybytes_len )
 
 static void yy_fatal_error (yyconst char* msg )
 {
-<<<<<<< HEAD
 			(void) fprintf( stderr, "%s\n", msg );
-=======
-    	(void) fprintf( stderr, "%s\n", msg );
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	exit( YY_EXIT_FAILURE );
 }
 
@@ -2048,11 +1838,7 @@ FILE *sqlget_out  (void)
 /** Get the length of the current token.
  * 
  */
-<<<<<<< HEAD
 yy_size_t sqlget_leng  (void)
-=======
-int sqlget_leng  (void)
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 {
         return sqlleng;
 }
@@ -2067,7 +1853,6 @@ char *sqlget_text  (void)
 }
 
 /** Set the current line number.
-<<<<<<< HEAD
  * @param _line_number line number
  * 
  */
@@ -2075,20 +1860,10 @@ void sqlset_lineno (int  _line_number )
 {
     
     sqllineno = _line_number;
-=======
- * @param line_number
- * 
- */
-void sqlset_lineno (int  line_number )
-{
-    
-    sqllineno = line_number;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 /** Set the input stream. This does not discard the current
  * input buffer.
-<<<<<<< HEAD
  * @param _in_str A readable stream.
  * 
  * @see sql_switch_to_buffer
@@ -2101,20 +1876,6 @@ void sqlset_in (FILE *  _in_str )
 void sqlset_out (FILE *  _out_str )
 {
         sqlout = _out_str ;
-=======
- * @param in_str A readable stream.
- * 
- * @see sql_switch_to_buffer
- */
-void sqlset_in (FILE *  in_str )
-{
-        sqlin = in_str ;
-}
-
-void sqlset_out (FILE *  out_str )
-{
-        sqlout = out_str ;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 int sqlget_debug  (void)
@@ -2122,15 +1883,9 @@ int sqlget_debug  (void)
         return sql_flex_debug;
 }
 
-<<<<<<< HEAD
 void sqlset_debug (int  _bdebug )
 {
         sql_flex_debug = _bdebug ;
-=======
-void sqlset_debug (int  bdebug )
-{
-        sql_flex_debug = bdebug ;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 static int yy_init_globals (void)
@@ -2190,12 +1945,8 @@ int sqllex_destroy  (void)
 #ifndef yytext_ptr
 static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )
 {
-<<<<<<< HEAD
 		
 	int i;
-=======
-	register int i;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	for ( i = 0; i < n; ++i )
 		s1[i] = s2[i];
 }
@@ -2204,11 +1955,7 @@ static void yy_flex_strncpy (char* s1, yyconst char * s2, int n )
 #ifdef YY_NEED_STRLEN
 static int yy_flex_strlen (yyconst char * s )
 {
-<<<<<<< HEAD
 	int n;
-=======
-	register int n;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	for ( n = 0; s[n]; ++n )
 		;
 
@@ -2218,19 +1965,12 @@ static int yy_flex_strlen (yyconst char * s )
 
 void *sqlalloc (yy_size_t  size )
 {
-<<<<<<< HEAD
 			return (void *) malloc( size );
-=======
-	return (void *) malloc( size );
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 void *sqlrealloc  (void * ptr, yy_size_t  size )
 {
-<<<<<<< HEAD
 		
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 	/* The cast to (char *) in the following accommodates both
 	 * implementations that use char* generic pointers, and those
 	 * that use void* generic pointers.  It works with the latter
@@ -2243,11 +1983,7 @@ void *sqlrealloc  (void * ptr, yy_size_t  size )
 
 void sqlfree (void * ptr )
 {
-<<<<<<< HEAD
 			free( (char *) ptr );	/* see sqlrealloc() for (char *) cast */
-=======
-	free( (char *) ptr );	/* see sqlrealloc() for (char *) cast */
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 }
 
 #define YYTABLES_NAME "yytables"

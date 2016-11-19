@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 /* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison interface for Yacc-like parsers in C
 
    Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
-=======
-/* A Bison parser, made by GNU Bison 3.0.2.  */
-
-/* Bison interface for Yacc-like parsers in C
-
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -80,11 +72,7 @@ extern int sqldebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-<<<<<<< HEAD
 
-=======
-typedef union YYSTYPE YYSTYPE;
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 union YYSTYPE
 {
 #line 33 "SqlParser.y" /* yacc.c:1909  */
@@ -96,11 +84,8 @@ union YYSTYPE
 
 #line 86 "SqlParser.tab.h" /* yacc.c:1909  */
 };
-<<<<<<< HEAD
 
 typedef union YYSTYPE YYSTYPE;
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif

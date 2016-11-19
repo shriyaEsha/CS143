@@ -56,10 +56,7 @@ class BTreeIndex {
    * @param rid[IN] the RecordId for the record being inserted into the index
    * @return error code. 0 if no error
    */
-<<<<<<< HEAD
   RC insert_recursive(int key, const RecordId& rid, PageId curPid, PageId &sibling_pid, int &sibling_key, int level);
-=======
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
   RC insert(int key, const RecordId& rid);
 
   /**
@@ -94,11 +91,7 @@ class BTreeIndex {
   
  private:
   PageFile pf;         /// the PageFile used to store the actual b+tree in disk
-<<<<<<< HEAD
   char buffer[PageFile::PAGE_SIZE]; // store rootPid and treeHeight on disk 
-=======
-
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
   PageId   rootPid;    /// the PageId of the root node
   int      treeHeight; /// the height of the tree
   /// Note that the content of the above two variables will be gone when

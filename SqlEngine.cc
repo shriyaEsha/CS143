@@ -1,18 +1,10 @@
 /**
-<<<<<<< HEAD
-=======
-from folder 2 --> bruinbase
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
  * Copyright (C) 2008 by The Regents of the University of California
  * Redistribution of this file is permitted under the terms of the GNU
  * Public License (GPL).
  *
  * @author Junghoo "John" Cho <cho AT cs.ucla.edu>
  * @date 3/24/2008
-<<<<<<< HEAD
-=======
-
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
  */
 
 #include <cstdio>
@@ -148,10 +140,6 @@ RC SqlEngine::load(const string& table, const string& loadfile, bool index)
   // create loadfile and recordfile
   fstream lf;
   RecordFile rf;
-<<<<<<< HEAD
-=======
-  //ifstream lf(loadfile.c_str());
->>>>>>> ececbdc2f4c387732b404700a2863874af308041
   lf.open(loadfile.c_str(),ios::in);
   if(!lf)
   {
