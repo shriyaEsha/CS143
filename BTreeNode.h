@@ -1,5 +1,4 @@
 /*
-from 2.. now in BB
  * Copyright (C) 2008 by The Regents of the University of California
  * Redistribution of this file is permitted under the terms of the GNU
  * Public License (GPL).
@@ -8,19 +7,25 @@ from 2.. now in BB
  * @date 5/28/2008
  */
 
-#ifndef BTREENODE_H
-#define BTREENODE_H
+#ifndef BTNODE_H
+#define BTNODE_H
 
 #include "RecordFile.h"
 #include "PageFile.h"
-#include<string.h>
-#include<math.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * BTLeafNode: The class representing a B+tree leaf node.
  */
 class BTLeafNode {
   public:
+  
+   /**
+    * Constructor for leaf node; initialize its variables
+    */
+    BTLeafNode();
+    
    /**
     * Insert the (key, rid) pair to the node.
     * Remember that all keys inside a B+tree node should be kept sorted.
@@ -44,15 +49,13 @@ class BTLeafNode {
     RC insertAndSplit(int key, const RecordId& rid, BTLeafNode& sibling, int& siblingKey);
 
    /**
-    * If searchKey exists in the node, set eid to the index entry
-    * with searchKey and return 0. If not, set eid to the index entry
-    * immediately after the largest index key that is smaller than searchKey, 
-    * and return the error code RC_NO_SUCH_RECORD.
-    * Remember that keys inside a B+tree node are always kept sorted.
+    * Find the index entry whose key value is larger than or equal to searchKey
+    * and output the eid (entry id) whose key value &gt;= searchKey.
+    * Remember that keys inside a B+tree node are sorted.
     * @param searchKey[IN] the key to search for.
-    * @param eid[OUT] the index entry number with searchKey or immediately
-                      behind the largest key smaller than searchKey.
-    * @return 0 if searchKey is found. If not, RC_NO_SEARCH_RECORD.
+    * @param eid[OUT] the entry number that contains a key larger              
+    *                 than or equalty to searchKey.
+    * @return 0 if successful. Return an error code if there is an error.
     */
     RC locate(int searchKey, int& eid);
 
@@ -84,10 +87,8 @@ class BTLeafNode {
     * @return the number of keys in the node
     */
     int getKeyCount();
- 
-    // return max key count
     int maxKeyCount();
-
+    
    /**
     * Read the content of the node from the page pid in the PageFile pf.
     * @param pid[IN] the PageId to read
@@ -104,15 +105,20 @@ class BTLeafNode {
     */
     RC write(PageId pid, PageFile& pf);
 
-    // constructor
-    BTLeafNode();
-  private:
    /**
+    * Print the keys of the node to cout
+    */
+    void print();
+
+  private:
+    //declare the variables that a nonleaf must hold
+    int number_keys;
+    /**
     * The main memory buffer for loading the content of the disk page 
     * that contains the node.
     */
-    int number_keys;
     char buffer[PageFile::PAGE_SIZE];
+   
 }; 
 
 
@@ -121,14 +127,19 @@ class BTLeafNode {
  */
 class BTNonLeafNode {
   public:
-   /**
+  
+    /**
+    * Constructor for nonleaf node; initialize its variables
+    */
+    BTNonLeafNode();
+  
+    /**
     * Insert a (key, pid) pair to the node.
     * Remember that all keys inside a B+tree node should be kept sorted.
     * @param key[IN] the key to insert
     * @param pid[IN] the PageId to insert
     * @return 0 if successful. Return an error code if the node is full.
     */
-    BTNonLeafNode();
     RC insert(int key, PageId pid);
 
    /**
@@ -169,7 +180,9 @@ class BTNonLeafNode {
     * @return the number of keys in the node
     */
     int getKeyCount();
+
     int maxKeyCount();
+
    /**
     * Read the content of the node from the page pid in the PageFile pf.
     * @param pid[IN] the PageId to read
@@ -185,21 +198,20 @@ class BTNonLeafNode {
     * @return 0 if successful. Return an error code if there is an error.
     */
     RC write(PageId pid, PageFile& pf);
-   // RC locate(int searchKey, int& eid);
-    
-    
-    
-  private:
+
    /**
+    * Print the keys of the node to cout
+    */
+    void print();
+
+  private:
+    //declare the variables that a nonleaf must hold
+    int number_keys;
+    /**
     * The main memory buffer for loading the content of the disk page 
     * that contains the node.
     */
-    int number_keys;
-    int sizeCount;
-    int sizeRec;
-    int sizeMax;
-    int sizeTot;
     char buffer[PageFile::PAGE_SIZE];
 }; 
 
-#endif /* BTREENODE_H */
+#endif /* BTNODE_H */
