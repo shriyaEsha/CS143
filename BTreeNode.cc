@@ -81,25 +81,17 @@ RC BTLeafNode::insert(int key, const RecordId& rid)
 	//Save last 4 bytes (the pid) for reconstructing the inserted leaf
 	PageId nextNodePtr = getNextNodePtr();
 	
-	//This is the size in bytes of an entry pair
 	int size_record = sizeof(RecordId) + sizeof(int);
 	
-	//Return error if no more space in this node
-	//Page has 1024 bytes, we need to store 12 bytes (key, rid)
-	//That means we can fit 85 with 4 bytes left over for pid pointer to next leaf node
-	//Check if adding one more (key, rid) pair will exceed the size limit of 85
 	int totPairs = maxKeyCount();
 	if(getKeyCount()+1 > totPairs) //if(getKeyCount()+1 > 85)
 	{
-		//cout << "Cannot insert anymore: this node is full!" << endl;
 		return RC_NODE_FULL;
 	}
 	
 	//Now we must go through the buffer's sorted keys to see where the new key goes
 	char* temp = buffer;
 	
-	//Loop through all the indexes in the temp buffer; increment by 12 bytes to jump to next key
-	//1008 is the largest possible index of the next inserted pair (since we already know we can fit another pair)
 	
 	int i;
 	for(i=0; i<1008; i+=size_record)
